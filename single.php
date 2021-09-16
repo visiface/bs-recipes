@@ -9,9 +9,9 @@
 
 get_header();
 
-var_dump(
-    get_field('my_text_field')
-);
+print('<pre>');
+print_r( get_field('ingredient') );
+print('</pre>');
 ?>
 
 	<main id="primary" class="site-main">

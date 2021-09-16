@@ -178,3 +178,23 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+function create_posttype() {
+ 
+    register_post_type( 'recipes',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Recipes' ),
+                'singular_name' => __( 'Recipe' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'recipes'),
+            'show_in_rest' => true,
+ 
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
