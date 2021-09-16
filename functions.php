@@ -290,7 +290,7 @@ function create_recipetags_hierarchical_taxonomy() {
     'update_item' => __( 'Update RecipeTag' ),
     'add_new_item' => __( 'Add New RecipeTag' ),
     'new_item_name' => __( 'New RecipeTag Name' ),
-    'menu_name' => __( 'RecipeTags' ),
+    'menu_name' => __( 'Recipe Tags' ),
   );    
  
 // Now register the taxonomy

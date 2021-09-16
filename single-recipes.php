@@ -8,11 +8,6 @@
  */
 
 get_header();
-
-print('<pre>');
-print_r( get_field('ingredient') );
-print_r( get_field('step') );
-print('</pre>');
 ?>
 
 	<main id="primary" class="site-main">
