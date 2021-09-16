@@ -1,5 +1,9 @@
 # WCM2020 BS-RECIPES Project
-## Kimberly Karlsson
+## SUMMARY
+  placeholder for link to site
+  
+  Student: Kimberly Karlsson
+
   Site Project for School using WordPress Themes and Functionality: "The assignment consists of you developing a brand new site (incl. your own WordPress theme) for a customer who wants to be able to publish recipes under different categories."
 
 ---------------------------------------
