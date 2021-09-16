@@ -178,7 +178,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
+/**
+ * Create a Custom Post Type
+ * RECIPES
+ * 
+ */
 function create_posttype() {
  
     register_post_type( 'recipes',
@@ -198,3 +202,110 @@ function create_posttype() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
+
+
+/*
+* Creating a function to create our CPT
+*/
+ 
+function custom_recipe_type() {
+ 
+// Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x( 'Recipes', 'Post Type General Name', 'bs-recipes' ),
+        'singular_name'       => _x( 'Recipe', 'Post Type Singular Name', 'bs-recipes' ),
+        'menu_name'           => __( 'Recipes', 'bs-recipes' ),
+        'parent_item_colon'   => __( 'Parent Recipe', 'bs-recipes' ),
+        'all_items'           => __( 'All Recipes', 'bs-recipes' ),
+        'view_item'           => __( 'View Recipe', 'bs-recipes' ),
+        'add_new_item'        => __( 'Add New Recipe', 'bs-recipes' ),
+        'add_new'             => __( 'Add New', 'bs-recipes' ),
+        'edit_item'           => __( 'Edit Recipe', 'bs-recipes' ),
+        'update_item'         => __( 'Update Recipe', 'bs-recipes' ),
+        'search_items'        => __( 'Search Recipe', 'bs-recipes' ),
+        'not_found'           => __( 'Not Found', 'bs-recipes' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'bs-recipes' ),
+    );
+     
+// Set other options for Custom Post Type
+     
+    $args = array(
+        'label'               => __( 'Recipes', 'bs-recipes' ),
+        'description'         => __( 'Recipes, Ingredients, and Steps', 'bs-recipes' ),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'ingredient', ),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array( 'recipe-tags' ),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */ 
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+        'show_in_rest'        => true,
+ 
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'recipes', $args );
+ 
+}
+ 
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+ 
+add_action( 'init', 'custom_recipe_type', 0 );
+
+
+
+ 
+//create a custom taxonomy
+ 
+function create_recipetags_hierarchical_taxonomy() {
+ 
+// Add new taxonomy, make it hierarchical like categories
+//first do the translations part for GUI
+ 
+  $labels = array(
+    'name' => _x( 'Recipe Tags', 'taxonomy general name' ),
+    'singular_name' => _x( 'RecipeTag', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search RecipeTags' ),
+    'all_items' => __( 'All RecipeTags' ),
+    'parent_item' => __( 'Parent RecipeTag' ),
+    'parent_item_colon' => __( 'Parent RecipeTag:' ),
+    'edit_item' => __( 'Edit RecipeTag' ), 
+    'update_item' => __( 'Update RecipeTag' ),
+    'add_new_item' => __( 'Add New RecipeTag' ),
+    'new_item_name' => __( 'New RecipeTag Name' ),
+    'menu_name' => __( 'RecipeTags' ),
+  );    
+ 
+// Now register the taxonomy
+  register_taxonomy('recipe-tags',
+    array('recipes'),
+    array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'subject' ),
+    )
+ );
+ 
+}
+add_action( 'init', 'create_recipetags_hierarchical_taxonomy', 0 );
