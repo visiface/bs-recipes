@@ -185,7 +185,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function create_posttype() {
  
-    register_post_type( 'recipes',
+    register_post_type( 'bs_recipie',
     // CPT Options
         array(
             'labels' => array(
@@ -194,7 +194,7 @@ function create_posttype() {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'recipes'),
+            'rewrite' => array('slug' => 'bs_recipie'),
             'show_in_rest' => true,
  
         )
@@ -236,7 +236,10 @@ function custom_recipe_type() {
         // Features this CPT supports in Post Editor
         'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'ingredient', ),
         // You can associate this CPT with a taxonomy or custom taxonomy. 
-        'taxonomies'          => array( 'recipe-tags' ),
+        'taxonomies'          => array( 
+            'bs_recipie_category', 
+            'bs_recipie_tags' 
+        ),
         /* A hierarchical CPT is like Pages and can have
         * Parent and child items. A non-hierarchical CPT
         * is like Posts.
@@ -258,7 +261,7 @@ function custom_recipe_type() {
     );
      
     // Registering your Custom Post Type
-    register_post_type( 'recipes', $args );
+    register_post_type( 'bs_recipie', $args );
  
 }
  
@@ -272,7 +275,46 @@ add_action( 'init', 'custom_recipe_type', 0 );
 
 
  
-//create a custom taxonomy
+// create custom taxonomies
+
+function create_recipecategory_hierarchical_taxonomy() {
+ 
+// Add new taxonomy, make it hierarchical like categories
+//first do the translations part for GUI
+ 
+  $labels = array(
+    'name' => _x( 'Recipie Categories', 'taxonomy general name' ),
+    'singular_name' => _x( 'Recipie Category', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Recipe Categories' ),
+    'all_items' => __( 'All Recipe Categories' ),
+    'parent_item' => __( 'Parent Recipe Category' ),
+    'parent_item_colon' => __( 'Parent Recipe Category:' ),
+    'edit_item' => __( 'Edit Recipe Category' ), 
+    'update_item' => __( 'Update Recipe Category' ),
+    'add_new_item' => __( 'Add New Recipe Category' ),
+    'new_item_name' => __( 'New Recipe Category Name' ),
+    'menu_name' => __( 'Recipie Categories' ),
+  );    
+ 
+// Now register the taxonomy
+  register_taxonomy('bs_recipie_category', // recipe-tags
+    array('bs_recipie'),
+    array(
+        'hierarchical'      => true,
+        'public'            => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'has_archive'       => true,
+        'rewrite'           => array( 'slug' => 'recipie-categories' ),
+    )
+ );
+ 
+}
+add_action( 'init', 'create_recipecategory_hierarchical_taxonomy', 0 );
+
  
 function create_recipetags_hierarchical_taxonomy() {
  
@@ -294,16 +336,17 @@ function create_recipetags_hierarchical_taxonomy() {
   );    
  
 // Now register the taxonomy
-  register_taxonomy('recipe-tags',
-    array('recipes'),
+  register_taxonomy('bs_recipie_tags', // recipe-tags
+    array('bs_recipie'),
     array(
-        'hierarchical' => true,
-        'labels' => $labels,
-        'show_ui' => true,
-        'show_in_rest' => true,
+        'hierarchical'      => false,
+        'labels'            => $labels,
+        'public'            => true,
+        'show_ui'           => true,
+        'show_in_rest'      => true,
         'show_admin_column' => true,
-        'query_var' => true,
-        'rewrite' => array( 'slug' => 'subject' ),
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'recipie-tags' ),
     )
  );
  
