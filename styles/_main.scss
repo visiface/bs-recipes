@@ -47,22 +47,24 @@
 
 
 .recipe-container {
-    padding: 20px 40px;
+    --spacing: 10px;
+    padding: var(--spacing) calc(var(--spacing) * 2);
     margin: 0px;
 
     @media (min-width: 1024px) {
+        --spacing: 20px;
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: var(--spacing);
     }
 
     .steps {
-        padding: 20px;
+        padding: var(--spacing);
         flex: 3;
 
         ol {
             margin: -5px;
-            padding: 20px;
+            padding: var(--spacing);
 
             li {
                 margin-bottom: 10px;
@@ -71,13 +73,13 @@
     }
 
     .ingredients {
-        padding: 20px;
+        padding: var(--spacing);
         background-color: rgb(209, 209, 209);
         min-width: 200px;
         flex: 1;
 
         h4 {
-            margin-left: 15px;
+            margin-left: var(--spacing);
         }
     }
 }

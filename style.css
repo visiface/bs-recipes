@@ -1003,23 +1003,25 @@ textarea {
 }
 
 .recipe-container {
-  padding: 20px 40px;
+  --spacing: 10px;
+  padding: var(--spacing) calc(var(--spacing) * 2);
   margin: 0px;
 }
 
 @media (min-width: 1024px) {
   .recipe-container {
+    --spacing: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 20px;
+    gap: var(--spacing);
   }
 }
 
 .recipe-container .steps {
-  padding: 20px;
+  padding: var(--spacing);
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
@@ -1027,7 +1029,7 @@ textarea {
 
 .recipe-container .steps ol {
   margin: -5px;
-  padding: 20px;
+  padding: var(--spacing);
 }
 
 .recipe-container .steps ol li {
@@ -1035,7 +1037,7 @@ textarea {
 }
 
 .recipe-container .ingredients {
-  padding: 20px;
+  padding: var(--spacing);
   background-color: #d1d1d1;
   min-width: 200px;
   -webkit-box-flex: 1;
@@ -1044,6 +1046,6 @@ textarea {
 }
 
 .recipe-container .ingredients h4 {
-  margin-left: 15px;
+  margin-left: var(--spacing);
 }
 /*# sourceMappingURL=style.css.map */
