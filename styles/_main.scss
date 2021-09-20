@@ -1,6 +1,8 @@
 .site {
     max-width: 1024px;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .content-container {
@@ -61,6 +63,7 @@
     .steps {
         padding: var(--spacing);
         flex: 3;
+        border: 1px solid rgb(209, 209, 209);
 
         ol {
             margin: -5px;
@@ -76,10 +79,20 @@
         padding: var(--spacing);
         background-color: rgb(209, 209, 209);
         min-width: 200px;
-        flex: 1;
+        flex: 1.5;
 
-        h4 {
+        h4, ul {
             margin-left: var(--spacing);
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                line-height: 1.8;
+            }
         }
     }
 }

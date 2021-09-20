@@ -33,19 +33,18 @@
                 </div>
             </header><!-- .entry-header -->
 
-            <div class="note-container">
-                <div class="notes">
-                    <h2>Author's Notes:</h2>
-                    <?php
-                        foreach ( get_field('authornote') as $authornote ) { ?>
+            <?php if( get_field('authornote') ) { ?>
+                <div class="note-container">
+                    <div class="notes">
+                        <h2>Author's Notes:</h2>
+                        <?php foreach ( get_field('authornote') as $authornote ) { ?>
                             <p>
                                 <?= $authornote['note']; ?>
                             </p>
-                        <?php 
-                        }
-                    ?>
+                        <?php } ?>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
 
             <div class="the-content">
                 <?php
@@ -72,18 +71,24 @@
         <div class="recipe-container">
             <div class="ingredients">
                 <h2>Ingredients</h2>
-                <?php
-                    // print('<pre>');
-                    // print_r( get_field('ingredient') );
-                    // print_r( get_field('step') );
-                    // print('</pre>');
+                <ul>
+                    <?php
+                        // print('<pre>');
+                        // print_r( get_field('ingredient') );
+                        // print_r( get_field('step') );
+                        // print('</pre>');
+                        
+                        foreach ( get_field('ingredient') as $ingredient ) { ?> 
+                            <li>
+                                <strong>
+                                    <?= $ingredient['quantity']; ?> <?= $ingredient['unit']; ?>
+                                </strong>
 
-                    foreach ( get_field('ingredient') as $ingredient ) { ?>
-                        <h4>
-                            <?= $ingredient['name']; ?>
-                        </h4>
-                    <?php }
-                ?>
+                                <?= $ingredient['name']; ?>
+                            </li>
+                        <?php }
+                    ?>
+                </ul>
             </div>
 
             <div class="steps">
