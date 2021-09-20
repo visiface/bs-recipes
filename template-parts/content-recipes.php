@@ -8,42 +8,58 @@
  */
 
 ?>
+    <div class="content-container">
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <header class="entry-header">
+                <?php
+                if ( is_singular() ) :
+                    the_title( '<h1 class="entry-title">', '</h1>' );
+                else :
+                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                endif;
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+                if ( 'post' === get_post_type() ) :
+                    ?>
+                    <div class="entry-meta">
+                        <?php
+                        bs_recipes_posted_on();
+                        bs_recipes_posted_by();
+                        ?>
+                    </div><!-- .entry-meta -->
+                <?php endif; ?>
+            </header><!-- .entry-header -->
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				bs_recipes_posted_on();
-				bs_recipes_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+    
+        <?php bs_recipes_post_thumbnail(); ?>
+        
+        <div class="recipe-container">
+            <div class="ingredients">
+                <h2>Ingredients</h2>
+                <?php
+                    // print('<pre>');
+                    // print_r( get_field('ingredient') );
+                    // print_r( get_field('step') );
+                    // print('</pre>');
 
-	<?php bs_recipes_post_thumbnail(); ?>
+                    foreach ( get_field('ingredient') as $ingredient ) { ?>
+                        <h4>
+                            <?= $ingredient['name']; ?>
+                        </h4>
+                    <?php }
+                ?>
+            </div>
 
-    <div class="aisf">
-        <?php
-            // print('<pre>');
-            // print_r( get_field('ingredient') );
-            // print_r( get_field('step') );
-            // print('</pre>');
-
-            foreach ( get_field('ingredient') as $ingredient ) { ?>
-                <h2>
-                    <?= $ingredient['name']; ?>
-                </h2>
-            <?php }
-        ?>
+            <div class="steps">
+                <h2>Directions</h2>
+                    <ol>
+                        <?php foreach ( get_field('step') as $step ) { ?>
+                            <li>
+                                <?= $step['step_description']; ?>
+                            </li>
+                        <?php } ?>
+                    </ol>
+            </div>
+        </div>
     </div>
 
 	<div class="entry-content">
