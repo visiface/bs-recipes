@@ -970,38 +970,72 @@ textarea {
 .content-container {
   width: calc(100% - 350px);
   margin: 0 auto;
-}
-
-.recipe-container {
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 40px;
+  padding: 40px 0px;
   background-color: #ececec;
 }
 
-.steps {
+.intro-container {
+  margin: 0px;
+}
+
+.intro-container .recipe-title .entry-title {
+  text-align: center;
+}
+
+.intro-container .the-content {
+  text-align: center;
+}
+
+.intro-container .note-container {
+  padding: 10px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #d1d1d1;
+}
+
+.intro-container .note-container .notes {
+  font-style: italic;
+  text-align: center;
+}
+
+.intro-container .note-container .notes h2 {
+  margin: 0px;
+}
+
+.intro-container .note-container .notes p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.recipe-container {
+  padding: 20px 40px;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recipe-container .steps {
   padding: 20px;
 }
 
-.steps ol {
+.recipe-container .steps ol {
   margin: -5px;
   padding: 20px;
 }
 
-.steps ol li {
+.recipe-container .steps ol li {
   margin-bottom: 10px;
 }
 
-.ingredients {
+.recipe-container .ingredients {
   padding: 20px;
   margin-right: 40px;
   background-color: #d1d1d1;
   min-width: 400px;
 }
 
-.ingredients h4 {
+.recipe-container .ingredients h4 {
   margin-left: 15px;
 }
 /*# sourceMappingURL=style.css.map */

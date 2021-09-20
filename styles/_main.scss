@@ -1,35 +1,71 @@
 .content-container {
     width: calc(100% - 350px);
     margin: 0 auto;
-}
-
-.recipe-container {
-    padding: 20px;
-    display: flex;
-    padding: 40px;
+    padding: 40px 0px;
     background-color: rgb(236, 236, 236);
 }
 
-.steps {
-    padding: 20px;
+.intro-container {
+    margin: 0px;
+    
+    .recipe-title {
+        .entry-title {
+            text-align: center;
+        }
+    }
 
-    ol {
-        margin: -5px;
-        padding: 20px;
+    .the-content {
+        text-align: center;
+    }
 
-        li {
-            margin-bottom: 10px;
+    .note-container {
+        padding: 10px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: rgb(209, 209, 209);
+
+        .notes {
+            font-style: italic;
+            text-align: center;
+
+            h2 {
+                margin: 0px;
+            }
+
+            p {
+                margin: 0px;
+                padding: 0px;
+            }
         }
     }
 }
 
-.ingredients {
-    padding: 20px;
-    margin-right: 40px;
-    background-color: rgb(209, 209, 209);
-    min-width: 400px;
+.recipe-container {
+    padding: 20px 40px;
+    margin: 0px;
+    display: flex;
 
-    h4 {
-        margin-left: 15px;
+    .steps {
+        padding: 20px;
+
+        ol {
+            margin: -5px;
+            padding: 20px;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .ingredients {
+        padding: 20px;
+        margin-right: 40px;
+        background-color: rgb(209, 209, 209);
+        min-width: 400px;
+
+        h4 {
+            margin-left: 15px;
+        }
     }
 }
