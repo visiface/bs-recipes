@@ -1,22 +1,27 @@
-.content-container {
-    width: calc(100% - 350px);
+.site {
+    max-width: 1024px;
     margin: 0 auto;
+}
+
+.content-container {
     padding: 40px 0px;
     background-color: rgb(236, 236, 236);
 }
 
+
 .intro-container {
     margin: 0px;
+    text-align: center;
     
-    .recipe-title {
-        .entry-title {
-            text-align: center;
-        }
-    }
+    // .recipe-title {
+    //     .entry-title {
+    //         add rule here if needed
+    //     }
+    // }
 
-    .the-content {
-        text-align: center;
-    }
+    // .the-content {
+    //     added rule here if needed
+    // }
 
     .note-container {
         padding: 10px;
@@ -26,7 +31,7 @@
 
         .notes {
             font-style: italic;
-            text-align: center;
+            // text-align: center;
 
             h2 {
                 margin: 0px;
@@ -40,13 +45,20 @@
     }
 }
 
+
 .recipe-container {
     padding: 20px 40px;
     margin: 0px;
-    display: flex;
+
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
     .steps {
         padding: 20px;
+        flex: 3;
 
         ol {
             margin: -5px;
@@ -60,9 +72,9 @@
 
     .ingredients {
         padding: 20px;
-        margin-right: 40px;
         background-color: rgb(209, 209, 209);
-        min-width: 400px;
+        min-width: 200px;
+        flex: 1;
 
         h4 {
             margin-left: 15px;

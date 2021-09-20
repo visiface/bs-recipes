@@ -967,22 +967,18 @@ textarea {
   margin-bottom: 1.5em;
 }
 
-.content-container {
-  width: calc(100% - 350px);
+.site {
+  max-width: 1024px;
   margin: 0 auto;
+}
+
+.content-container {
   padding: 40px 0px;
   background-color: #ececec;
 }
 
 .intro-container {
   margin: 0px;
-}
-
-.intro-container .recipe-title .entry-title {
-  text-align: center;
-}
-
-.intro-container .the-content {
   text-align: center;
 }
 
@@ -995,7 +991,6 @@ textarea {
 
 .intro-container .note-container .notes {
   font-style: italic;
-  text-align: center;
 }
 
 .intro-container .note-container .notes h2 {
@@ -1010,13 +1005,24 @@ textarea {
 .recipe-container {
   padding: 20px 40px;
   margin: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .recipe-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+  }
 }
 
 .recipe-container .steps {
   padding: 20px;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 .recipe-container .steps ol {
@@ -1030,9 +1036,11 @@ textarea {
 
 .recipe-container .ingredients {
   padding: 20px;
-  margin-right: 40px;
   background-color: #d1d1d1;
-  min-width: 400px;
+  min-width: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .recipe-container .ingredients h4 {
