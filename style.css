@@ -985,6 +985,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .site .site-header .site-branding {
@@ -996,14 +999,20 @@ textarea {
 }
 
 .site .site-header .main-navigation {
-  --spacing: 10px;
-  padding: var(--spacing) calc(var(--spacing) * 4);
+  margin-left: auto;
+  margin-right: 0;
+  width: auto;
+  padding: 0px 24px;
+}
+
+.site .site-header .main-navigation #primary-menu {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  gap: 12px;
 }
 
-.site .site-header .site-title {
+.site .site-header .main-navigation .site-title {
   margin: 0;
 }
 
