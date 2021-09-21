@@ -47,7 +47,8 @@
             <?php } ?>
 
             <div class="the-content">
-                <?php
+                <div class="padded-content">
+                    <?php
                     the_content(
                         sprintf(
                             wp_kses(
@@ -61,8 +62,10 @@
                             ),
                             wp_kses_post( get_the_title() )
                         )
-                    );
+                    );?>
+                </div>
 
+                <?php
                     bs_recipes_post_thumbnail(); 
                 ?>
             </div>

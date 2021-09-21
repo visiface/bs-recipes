@@ -1040,6 +1040,11 @@ textarea {
   line-height: 2;
 }
 
+.intro-container .the-content .padded-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .intro-container .note-container {
   padding: 10px;
   margin: 0 auto;
