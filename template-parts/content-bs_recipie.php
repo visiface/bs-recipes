@@ -38,9 +38,9 @@
                     <div class="notes">
                         <h2>Author's Notes:</h2>
                         <?php foreach ( get_field('authornote') as $authornote ) { ?>
-                            <p>
+                            <sub>
                                 <?= $authornote['note']; ?>
-                            </p>
+                            </sub>
                         <?php } ?>
                     </div>
                 </div>

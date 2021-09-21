@@ -994,6 +994,10 @@ textarea {
   margin: 0;
 }
 
+.intro-container .the-content {
+  line-height: 2;
+}
+
 .intro-container .note-container {
   padding: 10px;
   margin: 0 auto;
@@ -1009,9 +1013,10 @@ textarea {
   margin: 0px;
 }
 
-.intro-container .note-container .notes p {
+.intro-container .note-container .notes sub {
   margin: 0px;
-  padding: 0px;
+  line-height: 1.8;
+  display: block;
 }
 
 .extra-container {

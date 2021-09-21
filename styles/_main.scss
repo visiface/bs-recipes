@@ -25,9 +25,9 @@
         }
     }
 
-    // .the-content {
-    //     added rule here if needed
-    // }
+    .the-content {
+        line-height: 2;
+    }
 
     .note-container {
         padding: 10px;
@@ -43,9 +43,10 @@
                 margin: 0px;
             }
 
-            p {
+            sub {
                 margin: 0px;
-                padding: 0px;
+                line-height: 1.8;
+                display: block;
             }
         }
     }
