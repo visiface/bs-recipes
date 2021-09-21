@@ -980,6 +980,16 @@ textarea {
           flex: 2;
 }
 
+.site .page-header {
+  background-color: #dabbbb;
+}
+
+.site .page-header .page-title {
+  margin: 0;
+  padding: 24px 0px;
+  text-align: center;
+}
+
 .site .site-header {
   background-color: #b88181;
   display: -webkit-box;
@@ -1005,11 +1015,34 @@ textarea {
   padding: 0px 24px;
 }
 
+.site .site-header .main-navigation .menu-toggle {
+  background-color: #956b6b;
+  border: none;
+  color: #ececec;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
+}
+
 .site .site-header .main-navigation #primary-menu {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  gap: 12px;
+  gap: 24px;
+}
+
+.site .site-header .main-navigation #primary-menu li {
+  font-size: 1.5em;
+}
+
+.site .site-header .main-navigation #primary-menu li a {
+  text-decoration: none;
+  color: #404040;
+}
+
+.site .site-header .main-navigation #primary-menu li a:hover {
+  color: #ececec;
 }
 
 .site .site-header .main-navigation .site-title {
@@ -1034,6 +1067,15 @@ textarea {
 .intro-container .recipe-title .entry-title {
   padding: 20px;
   margin: 0;
+}
+
+.intro-container .recipe-title .entry-title a {
+  text-decoration: none;
+  color: #404040;
+}
+
+.intro-container .recipe-title .entry-title a:hover {
+  color: #ececec;
 }
 
 .intro-container .the-content {
@@ -1068,6 +1110,11 @@ textarea {
 
 .extra-container {
   text-align: center;
+}
+
+.extra-container .recipe-title .entry-title a {
+  text-decoration: none;
+  color: #404040;
 }
 
 .recipe-container {

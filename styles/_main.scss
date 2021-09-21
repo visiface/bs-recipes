@@ -8,6 +8,16 @@
         flex: 2;
     }
 
+    .page-header {
+        background-color: rgb(218, 187, 187);
+        
+        .page-title {
+            margin: 0;
+            padding: 24px 0px;
+            text-align: center;
+        }
+    }
+    
     .site-header {
         background-color: rgb(184, 129, 129);
         display: flex;
@@ -28,9 +38,32 @@
             width: auto;
             padding: 0px 24px;
 
+            .menu-toggle {
+                background-color: rgb(149, 107, 107); 
+                border: none;
+                color: rgb(236, 236, 236);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                font-size: large;
+            }
+
             #primary-menu { // ul
                 flex: 2;
-                gap: 12px;
+                gap: 24px;
+
+                li {
+                    font-size: 1.5em;
+
+                    a {
+                        text-decoration: none;
+                        color: #404040;
+                    }
+
+                    a:hover {
+                        color: rgb(236, 236, 236);
+                    }
+                }
             }
 
             .site-title {
@@ -57,6 +90,15 @@
         .entry-title {
             padding: 20px;
             margin: 0;
+            
+            a {
+                text-decoration: none;
+                color: #404040;
+            }
+
+            a:hover {
+                color: rgb(236, 236, 236);
+            }
         }
     }
 
@@ -94,6 +136,15 @@
 
 .extra-container {
     text-align: center;
+
+    .recipe-title {
+        .entry-title {
+            a {
+                text-decoration: none;
+                color: #404040;
+            }
+        }
+    }
 }
 
 
