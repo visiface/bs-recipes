@@ -3,6 +3,33 @@
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+
+    .nav {
+        flex: 2;
+    }
+
+    .site-header {
+        background-color: rgb(184, 129, 129);
+        display: flex;
+
+        .site-branding {
+            max-width: 200px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .main-navigation {
+            --spacing: 10px;
+            padding: var(--spacing) calc(var(--spacing) * 4);
+            flex: 2;
+        }
+
+        .site-title {
+            margin: 0;
+        }
+    }
 }
 
 .content-container {
