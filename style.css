@@ -972,6 +972,8 @@ textarea {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .site .nav {
@@ -1006,6 +1008,15 @@ textarea {
 
 .site .site-header .site-branding img {
   width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.site .site-header .site-branding img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .site .site-header .main-navigation {
@@ -1039,10 +1050,13 @@ textarea {
 .site .site-header .main-navigation #primary-menu li a {
   text-decoration: none;
   color: #404040;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .site .site-header .main-navigation #primary-menu li a:hover {
   color: #ececec;
+  font-size: 1.05em;
 }
 
 .site .site-header .main-navigation .site-title {
@@ -1081,6 +1095,15 @@ textarea {
   max-width: 200px;
   max-height: 100px;
   overflow: hidden;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.content-container .archive-container .archive-img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 .content-container .archive-container .archive-img .post-tumbnail {
@@ -1106,10 +1129,13 @@ textarea {
 .intro-container .recipe-title .entry-title a {
   text-decoration: none;
   color: #404040;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .intro-container .recipe-title .entry-title a:hover {
   color: #ececec;
+  font-size: 1.05em;
 }
 
 .intro-container .the-content {
