@@ -6,20 +6,24 @@
 }
 
 .content-container {
-    padding: 40px 0px;
     background-color: rgb(236, 236, 236);
+    padding-bottom: 40px;
 }
 
 
 .intro-container {
     margin: 0px;
+    padding: 0;
     text-align: center;
     
-    // .recipe-title {
-    //     .entry-title {
-    //         add rule here if needed
-    //     }
-    // }
+    .recipe-title {
+        background-color: rgb(189, 168, 168);
+
+        .entry-title {
+            padding: 20px;
+            margin: 0;
+        }
+    }
 
     // .the-content {
     //     added rule here if needed
@@ -47,6 +51,10 @@
     }
 }
 
+.extra-container {
+    text-align: center;
+}
+
 
 .recipe-container {
     --spacing: 10px;
@@ -58,6 +66,11 @@
         display: flex;
         flex-wrap: wrap;
         gap: var(--spacing);
+    }
+
+    .recipe-title {
+        background-color: rgb(236, 236, 236);
+        flex: 1;
     }
 
     .steps {

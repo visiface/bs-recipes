@@ -975,13 +975,23 @@ textarea {
 }
 
 .content-container {
-  padding: 40px 0px;
   background-color: #ececec;
+  padding-bottom: 40px;
 }
 
 .intro-container {
   margin: 0px;
+  padding: 0;
   text-align: center;
+}
+
+.intro-container .recipe-title {
+  background-color: #bda8a8;
+}
+
+.intro-container .recipe-title .entry-title {
+  padding: 20px;
+  margin: 0;
 }
 
 .intro-container .note-container {
@@ -1004,6 +1014,10 @@ textarea {
   padding: 0px;
 }
 
+.extra-container {
+  text-align: center;
+}
+
 .recipe-container {
   --spacing: 10px;
   padding: var(--spacing) calc(var(--spacing) * 2);
@@ -1020,6 +1034,13 @@ textarea {
         flex-wrap: wrap;
     gap: var(--spacing);
   }
+}
+
+.recipe-container .recipe-title {
+  background-color: #ececec;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .recipe-container .steps {
