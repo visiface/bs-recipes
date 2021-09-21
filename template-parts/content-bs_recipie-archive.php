@@ -11,6 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="content-container">
+        <div class="archive-container">
+        
+        </div>
+        
+        
+        
         <div class="intro-container">
             <header class="entry-header">
                 <div class="recipe-title">
