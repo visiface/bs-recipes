@@ -30,6 +30,14 @@
                                 ?>
                             </div><!-- .entry-meta -->
                         <?php endif; ?>
+
+                        <div class="tag-me">
+                            <?php foreach ( get_the_terms(get_the_ID(), 'bs_recipie_tags') as $term ) { ?>
+                                <a href="<?= get_term_link($term, 'bs_recipie_tags'); ?>">
+                                    <?= $term->name; ?>
+                                </a>
+                            <?php } ?>
+                        </div>
                 </div>
             </header><!-- .entry-header -->
 
@@ -128,15 +136,4 @@
             </div>
         </div>
 
-        <div class="entry-content">
-            <?php
-            
-            wp_link_pages(
-                array(
-                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bs-recipes' ),
-                    'after'  => '</div>',
-                )
-            );
-            ?>
-        </div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
