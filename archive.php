@@ -17,7 +17,11 @@ get_header();
 			<header class="page-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<?= get_template_directory_uri() ?>/img/recipehero.jpg)">
 				
 				<h1 class="page-title">
-                    <?php single_term_title(); ?>
+                    <?php if( single_term_title('', false) !== NULL ){
+                        single_term_title();
+                    } else {
+                        the_archive_title();
+                    } ?>
                 </h1>
 				<?php // the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 				
