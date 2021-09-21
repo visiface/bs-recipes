@@ -974,6 +974,7 @@ textarea {
   padding-right: 20px;
   -webkit-transition: all 1s;
   transition: all 1s;
+  z-index: 2;
 }
 
 .site .nav {
@@ -1089,6 +1090,11 @@ textarea {
           align-items: center;
 }
 
+.content-container .archive-container .intro-container .entry-header .recipe-title .entry-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .content-container .archive-container .archive-img {
   min-width: 50px;
   min-height: 50px;
@@ -1131,6 +1137,8 @@ textarea {
   color: #404040;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .intro-container .recipe-title .entry-title a:hover {
@@ -1251,6 +1259,7 @@ textarea {
     bottom: 0;
     left: 0;
     width: 215px;
+    z-index: 1;
   }
   .toggled .menu-menu-1-container {
     display: block;
