@@ -201,3 +201,30 @@
         }
     }
 }
+
+
+
+@media screen and (max-width: 37.5em) {
+
+    .menu-menu-1-container {
+        display: none;
+        position: fixed;
+        background: black;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 215px;
+    }
+
+    .toggled {
+        .menu-menu-1-container {
+            display: block;
+        }
+    }
+    
+    .admin-bar {
+        .menu-menu-1-container {
+            top: 46px;
+        }
+    }
+}
