@@ -31,6 +31,14 @@
                             </div><!-- .entry-meta -->
                         <?php endif; ?>
 
+                        <div class="category-me" id="bscat">
+                            <?php foreach ( get_the_terms(get_the_ID(), 'bs_recipie_category') as $term ) { ?>
+                                <a href="<?= get_term_link($term, 'bs_recipie_category'); ?>">
+                                    <?= $term->name; ?>
+                                </a>
+                            <?php } ?>
+                        </div>
+
                         <div class="tag-me">
                             <?php foreach ( get_the_terms(get_the_ID(), 'bs_recipie_tags') as $term ) { ?>
                                 <a href="<?= get_term_link($term, 'bs_recipie_tags'); ?>">

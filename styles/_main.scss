@@ -1,8 +1,11 @@
-body.home, body.page-template-default {
+body.home, 
+body.page-template-default {
     .site-main {
         article {
 
-            .page-content, .entry-content, .entry-summary {
+            .page-content, 
+            .entry-content, 
+            .entry-summary {
                 margin: 0;
             }
             .entry-header{
@@ -107,6 +110,7 @@ body.home, body.page-template-default {
     }
 }
 
+// editing ARCHIVE
 .content-container {
     background-color: rgb(236, 236, 236);
     padding-bottom: 40px;
@@ -122,12 +126,26 @@ body.home, body.page-template-default {
                 
                 .recipe-title {
                     height: 100px;
+                    padding: 0;
                     display: grid;
                     align-items: center;
 
                     .entry-title {
-                        overflow: hidden;
-                        text-overflow: ellipsis;
+                        padding: 20px;
+                        margin: 0;
+                        font-size: 1.5em;
+                        
+                        a {
+                            text-decoration: none;
+                            color: #404040;
+                            transition: all 0.2s ease-in-out;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            &:hover {
+                                color: rgb(236, 236, 236);
+                                font-size: 1.05em;
+                            }
+                        }
                     }
                 }
             }
@@ -154,6 +172,7 @@ body.home, body.page-template-default {
 }
 
 
+// editing RECIPE
 .intro-container {
     margin: 0px;
     padding: 0;
@@ -161,8 +180,10 @@ body.home, body.page-template-default {
     
     .recipe-title {
         background-color: rgb(189, 168, 168);
+        padding: 102px 0px;
 
-        .tag-me {
+        .tag-me, 
+        .category-me {
             padding-bottom: 12px;
             display: flex;
             justify-content: center;
@@ -171,35 +192,35 @@ body.home, body.page-template-default {
             gap: 8px;
 
             a {
-                background-color: #86657c;
                 color: #ececec;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
                 padding: 7px 14px;
                 border-radius: 4px;
-                font-size: small;
-                &:hover {
-                    background-color: #5f4d5a;
-                }   
+                font-size: small;   
             }
+        }
+        .category-me a {
+            background-color: #86657c;
+            &:hover {
+                    background-color: #5f4d5a;
+                }
+        }
+        .tag-me a {
+            background-color: #656586;
+            &:hover {
+                    background-color: #4d4d66;
+                }
         }
 
         .entry-title {
             padding: 20px;
             margin: 0;
-            
-            a {
-                text-decoration: none;
-                color: #404040;
-                transition: all 0.2s ease-in-out;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                &:hover {
-                    color: rgb(236, 236, 236);
-                    font-size: 1.05em;
-                }
-            }
+            font-size: 2em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #404040;
         }
     }
 
