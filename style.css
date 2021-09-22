@@ -972,6 +972,16 @@ body.page-template-default {
   margin: 0;
 }
 
+body.home .site-main,
+body.page-template-default .site-main {
+  background-color: #ececec;
+}
+
+body.home .site-main article,
+body.page-template-default .site-main article {
+  margin: 0;
+}
+
 body.home .site-main article .page-content,
 body.home .site-main article .entry-content,
 body.home .site-main article .entry-summary,
@@ -979,6 +989,7 @@ body.page-template-default .site-main article .page-content,
 body.page-template-default .site-main article .entry-content,
 body.page-template-default .site-main article .entry-summary {
   margin: 0;
+  padding-bottom: 24px;
 }
 
 body.home .site-main article .entry-header .entry-title,
@@ -1005,15 +1016,26 @@ body.page-template-default .site-main article .entry-header .entry-title {
   background-color: #dabbbb;
   background-position: 21% 70%;
   background-size: cover;
+  min-height: 300px;
+  max-height: 350px;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .site .page-header[style] {
   color: #ececec;
 }
 
-.site .page-header .page-title {
+.site .page-header .category-me {
+  -ms-flex-item-align: start;
+      align-self: start;
   margin: 0 auto;
-  min-height: 300px;
+  max-width: 750px;
+  padding-bottom: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1023,6 +1045,42 @@ body.page-template-default .site-main article .entry-header .entry-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site .page-header .category-me a {
+  color: #ececec;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 4px;
+  font-size: small;
+}
+
+.site .page-header .category-me a {
+  background-color: #86657c;
+}
+
+.site .page-header .category-me a:hover {
+  background-color: #5f4d5a;
+}
+
+.site .page-header .page-title {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: end;
 }
 
 .site .site-header {
@@ -1227,6 +1285,8 @@ body.page-template-default .site-main article .entry-header .entry-title {
 
 .intro-container .recipe-title .tag-me,
 .intro-container .recipe-title .category-me {
+  margin: 0 auto;
+  max-width: 750px;
   padding-bottom: 12px;
   display: -webkit-box;
   display: -ms-flexbox;

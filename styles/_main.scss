@@ -4,12 +4,18 @@ body.page-template-default {
     margin: 0;
 
     .site-main {
+
+        background-color: rgb(236, 236, 236);
+
         article {
+
+            margin: 0;
 
             .page-content, 
             .entry-content, 
             .entry-summary {
                 margin: 0;
+                padding-bottom: 24px;
             }
             .entry-header{
                 .entry-title {
@@ -38,16 +44,49 @@ body.page-template-default {
         background-color: rgb(218, 187, 187);
         background-position: 21% 70%;
         background-size: cover;
+        min-height: 300px;
+        max-height: 350px;
+        text-align: center;
+        display: grid;
+        align-items: center;
         &[style] {
             color: rgb(236, 236, 236);
+        }
+
+        .category-me {
+            align-self: start;
+            margin: 0 auto;
+            max-width: 750px;
+            padding-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            a {
+                color: #ececec;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                padding: 7px 14px;
+                border-radius: 4px;
+                font-size: small;   
+            }
+        }
+        .category-me a {
+            background-color: #86657c;
+            &:hover {
+                    background-color: #5f4d5a;
+                }
         }
         
         .page-title {
             margin: 0 auto;
-            min-height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
+            align-self: end;
         }
     }
     
@@ -224,6 +263,8 @@ body.page-template-default {
 
         .tag-me, 
         .category-me {
+            margin: 0 auto;
+            max-width: 750px;
             padding-bottom: 12px;
             display: flex;
             justify-content: center;

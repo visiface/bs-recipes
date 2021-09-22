@@ -23,7 +23,15 @@ get_header();
                         the_archive_title();
                     } ?>
                 </h1>
-				<?php // the_archive_description( '<div class="archive-description">', '</div>' ); ?>
+				
+                <div class="category-me" id="bscat">
+                    <?php foreach ( get_terms('bs_recipie_category') as $term ) { ?>
+                        <a href="<?= get_term_link($term, 'bs_recipie_category'); ?>">
+                            <?= $term->name; ?>
+                        </a>
+                    <?php 
+                    } ?>
+                </div>
 				
 			</header><!-- .page-header -->
 
