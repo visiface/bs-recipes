@@ -1000,7 +1000,6 @@ body.page-template-default .site-main article .entry-header .entry-title {
 .site {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 0px 24px;
   -webkit-transition: all 1s;
   transition: all 1s;
   z-index: 2;
@@ -1017,7 +1016,6 @@ body.page-template-default .site-main article .entry-header .entry-title {
   background-position: 21% 70%;
   background-size: cover;
   min-height: 400px;
-  max-height: 450px;
   text-align: center;
   display: -ms-grid;
   display: grid;

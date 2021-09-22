@@ -29,7 +29,6 @@ body.page-template-default {
 .site {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0px 24px;
     transition: all 1s;
     z-index: 2;
     // &:hover {
@@ -45,7 +44,6 @@ body.page-template-default {
         background-position: 21% 70%;
         background-size: cover;
         min-height: 400px;
-        max-height: 450px;
         text-align: center;
         display: grid;
         align-items: center;
