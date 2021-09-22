@@ -1149,6 +1149,37 @@ body.home .site-main article .entry-header .entry-title, body.page-template-defa
   background-color: #bda8a8;
 }
 
+.intro-container .recipe-title .tag-me {
+  padding-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+
+.intro-container .recipe-title .tag-me a {
+  background-color: #86657c;
+  color: #ececec;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 4px;
+  font-size: small;
+}
+
+.intro-container .recipe-title .tag-me a:hover {
+  background-color: #5f4d5a;
+}
+
 .intro-container .recipe-title .entry-title {
   padding: 20px;
   margin: 0;
