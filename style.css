@@ -1016,8 +1016,8 @@ body.page-template-default .site-main article .entry-header .entry-title {
   background-color: #dabbbb;
   background-position: 21% 70%;
   background-size: cover;
-  min-height: 300px;
-  max-height: 350px;
+  min-height: 400px;
+  max-height: 450px;
   text-align: center;
   display: -ms-grid;
   display: grid;

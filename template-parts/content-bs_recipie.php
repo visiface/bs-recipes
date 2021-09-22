@@ -13,7 +13,7 @@
     <div class="content-container">
         <div class="intro-container">
             <header class="entry-header">
-                <div class="recipe-title" style="background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(<?= get_template_directory_uri() ?>/img/recipehero2.jpg)">
+                <div class="recipe-title" style="min-height: 400px; max-height: 450px; background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(<?= get_template_directory_uri() ?>/img/recipehero2.jpg)">
                     <?php
                         if ( is_singular() ) :
                             the_title( '<h1 class="entry-title">', '</h1>' );
