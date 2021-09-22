@@ -998,7 +998,7 @@ body.page-template-default .site-main article .entry-header .entry-title {
 
 .site .page-header {
   background-color: #dabbbb;
-  background-position: 21% 67%;
+  background-position: 21% 70%;
   background-size: cover;
 }
 
@@ -1170,6 +1170,12 @@ body.page-template-default .site-main article .entry-header .entry-title {
 .intro-container .recipe-title {
   background-color: #bda8a8;
   padding: 102px 0px;
+  background-position: 1% 63%;
+  background-size: cover;
+}
+
+.intro-container .recipe-title[style] {
+  color: #ececec;
 }
 
 .intro-container .recipe-title .tag-me,
@@ -1222,7 +1228,7 @@ body.page-template-default .site-main article .entry-header .entry-title {
   font-size: 2em;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #404040;
+  color: #ececec;
 }
 
 .intro-container .the-content {

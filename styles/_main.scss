@@ -33,7 +33,7 @@ body.page-template-default {
 
     .page-header {
         background-color: rgb(218, 187, 187);
-        background-position: 21% 67%;
+        background-position: 21% 70%;
         background-size: cover;
         &[style] {
             color: rgb(236, 236, 236);
@@ -181,6 +181,11 @@ body.page-template-default {
     .recipe-title {
         background-color: rgb(189, 168, 168);
         padding: 102px 0px;
+        background-position: 1% 63%;
+            background-size: cover;
+            &[style] {
+                color: rgb(236, 236, 236);
+            }
 
         .tag-me, 
         .category-me {
@@ -220,7 +225,7 @@ body.page-template-default {
             font-size: 2em;
             overflow: hidden;
             text-overflow: ellipsis;
-            color: #404040;
+            color: #ececec;
         }
     }
 
