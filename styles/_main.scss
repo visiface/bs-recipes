@@ -47,6 +47,7 @@ body.page-template-default {
         text-align: center;
         display: grid;
         align-items: center;
+        font-size: 2em;
         &[style] {
             color: rgb(236, 236, 236);
         }
@@ -155,7 +156,6 @@ body.page-template-default {
         align-items: center;
         align-content: center;
         min-height: 121px;
-        max-height: 200px;
 
         .site-info {
             padding: 12px;
@@ -201,10 +201,10 @@ body.page-template-default {
                     display: grid;
                     align-items: center;
 
-                    .entry-title {
+                    .entry-title,
+                    .archive-title {
                         padding: 20px;
                         margin: 0;
-                        font-size: 1.5em;
                         
                         a {
                             text-decoration: none;
@@ -217,6 +217,12 @@ body.page-template-default {
                                 font-size: 1.05em;
                             }
                         }
+                    }
+                    .entry-title {
+                        font-size: 3em;
+                    }
+                    .archive-title {
+                        font-size: 1.5rem;
                     }
                 }
             }
@@ -293,7 +299,7 @@ body.page-template-default {
         .entry-title {
             padding: 20px;
             margin: 0;
-            font-size: 2em;
+            font-size: 3em;
             overflow: hidden;
             text-overflow: ellipsis;
             color: #ececec;
@@ -306,6 +312,12 @@ body.page-template-default {
         .padded-content {
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        .post-thumbnail {
+            img {
+                width: 100%;
+            }
         }
     }
 
@@ -364,7 +376,7 @@ body.page-template-default {
     }
 
     .steps {
-        padding: var(--spacing);
+        padding: var(--spacing) calc(var(--spacing) * 2);
         flex: 3;
         border: 1px solid rgb(209, 209, 209);
 
@@ -374,6 +386,11 @@ body.page-template-default {
 
             li {
                 margin-bottom: 10px;
+            }
+
+            li::marker {
+                font-weight: bold;
+                font-size: large;
             }
         }
     }

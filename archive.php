@@ -20,7 +20,7 @@ get_header();
                     <?php if( single_term_title('', false) !== NULL ){
                         single_term_title();
                     } else {
-                        the_archive_title();
+                        post_type_archive_title();
                     } ?>
                 </h1>
 				
