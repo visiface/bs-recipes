@@ -967,11 +967,18 @@ textarea {
   margin-bottom: 1.5em;
 }
 
+body.home .site-main article .page-content, body.home .site-main article .entry-content, body.home .site-main article .entry-summary, body.page-template-default .site-main article .page-content, body.page-template-default .site-main article .entry-content, body.page-template-default .site-main article .entry-summary {
+  margin: 0;
+}
+
+body.home .site-main article .entry-header .entry-title, body.page-template-default .site-main article .entry-header .entry-title {
+  display: none;
+}
+
 .site {
   max-width: 1024px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0px 24px;
   -webkit-transition: all 1s;
   transition: all 1s;
   z-index: 2;
