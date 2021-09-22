@@ -967,6 +967,11 @@ textarea {
   margin-bottom: 1.5em;
 }
 
+body.home,
+body.page-template-default {
+  margin: 0;
+}
+
 body.home .site-main article .page-content,
 body.home .site-main article .entry-content,
 body.home .site-main article .entry-summary,
@@ -1090,6 +1095,48 @@ body.page-template-default .site-main article .entry-header .entry-title {
 
 .site .site-header .main-navigation .site-title {
   margin: 0;
+}
+
+.site .site-footer {
+  background-color: #b88181;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  min-height: 121px;
+  max-height: 200px;
+}
+
+.site .site-footer .site-info {
+  padding: 12px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: small;
+  text-transform: uppercase;
+}
+
+.site .site-footer .site-info .sep {
+  padding: 0 12px;
+}
+
+.site .site-footer .site-info a {
+  padding-left: 4px;
+  color: #404040;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.site .site-footer .site-info a:hover {
+  color: #ececec;
+  font-size: 1.05em;
 }
 
 .content-container {

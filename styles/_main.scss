@@ -1,5 +1,8 @@
 body.home, 
 body.page-template-default {
+
+    margin: 0;
+
     .site-main {
         article {
 
@@ -105,6 +108,38 @@ body.page-template-default {
 
             .site-title {
                 margin: 0;
+            }
+        }  
+    }
+
+    .site-footer {
+        background-color: #b88181;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        min-height: 121px;
+        max-height: 200px;
+
+        .site-info {
+            padding: 12px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: small;
+            text-transform: uppercase;
+
+            .sep {
+                padding: 0 12px;
+            }
+
+            a {
+                padding-left: 4px;
+                color: #404040;
+                transition: all 0.2s linear;
+                &:hover {
+                    color: rgb(236, 236, 236);
+                    font-size: 1.05em;
+                }
             }
         }
     }
