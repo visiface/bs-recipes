@@ -11,7 +11,9 @@
 ## RESOURCES:
 
  - [theHiveResistance](https://wcm20.thehiveresistance.com/cms-saf-inlamningsuppgift/) : Assignment Blog
- - [github](https://trello.com/b/asHlJEdX/instalit) : Repository for the Theme
+ - [github](https://github.com/visiface/bs-recipes) : Repository for the Theme
+ - [underscores](https://underscores.me/) : Starter for Theme
+ - [BS-Recipes]() : Link to the Project on-site/live.
 
 ---------------------------------------
 
@@ -22,7 +24,12 @@
 - WP Handbook: lifesaver.
 - underscores: good!
 - learn react: learn gutenburg. 
-- next time, just use the theme hero img instead of using gutenburg feature, bc the content padding will affect hero images made in gutenburg (with current css, at least)
+- next time, just use the theme hero img instead of using gutenburg feature, bc the content padding will affect hero images made in gutenburg (with current css, at least). 
+- don't want to target just h2's and p's, that defeats the purpose. need to think ahead for more blocks that gb has.
+- further familiarize with Translation/Pot files, LocoTranslate, or other translator plugins to further set up strings.
+- API's. thinking emoji.
+- The Categories only show up if a recipe with that category exists, remember that for future projects, because need to test if the logic is being put in the correct place. no logic = nothing pops up!
+- DB connections w SFTP
 
 ---------------------------------------
 
