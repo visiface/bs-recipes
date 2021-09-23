@@ -1,6 +1,6 @@
 # WCM2020 BS-RECIPES Project
 ## SUMMARY
-  [BS-Recipes All Reci-pies](http://localhost/bs_recipes/bs_recipie/)
+  [BS-Recipes All Reci-pies](http://visiface.store/bs_recipes/bs_recipie/)
   
   Student: Kimberly Karlsson
 
