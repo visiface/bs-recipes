@@ -1,6 +1,6 @@
 # WCM2020 BS-RECIPES Project
 ## SUMMARY
-  placeholder for link to site
+  [BS-Recipes All Reci-pies](http://localhost/bs_recipes/bs_recipie/)
   
   Student: Kimberly Karlsson
 
@@ -13,7 +13,7 @@
  - [theHiveResistance](https://wcm20.thehiveresistance.com/cms-saf-inlamningsuppgift/) : Assignment Blog
  - [github](https://github.com/visiface/bs-recipes) : Repository for the Theme
  - [underscores](https://underscores.me/) : Starter for Theme
- - [BS-Recipes]() : Link to the Project on-site/live.
+ - [BS-Recipes](https://visiface.store/bs_recipes/) : Link to the Project on-site/live.
 
 ---------------------------------------
 
@@ -28,8 +28,9 @@
 - don't want to target just h2's and p's, that defeats the purpose. need to think ahead for more blocks that gb has.
 - further familiarize with Translation/Pot files, LocoTranslate, or other translator plugins to further set up strings.
 - API's. thinking emoji.
-- The Categories only show up if a recipe with that category exists, remember that for future projects, because need to test if the logic is being put in the correct place. no logic = nothing pops up!
+- The Categories only show up if a recipe with that category exists, remember that for future projects, because need to test if the logic is being put in the correct place. get terms by default hides empty! GOT IT.
 - DB connections w SFTP
+- Realized I spelled recipe wrong as "recipie" but gonna roll with it: that's funny.
 
 ---------------------------------------
 
