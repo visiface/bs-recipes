@@ -15,6 +15,17 @@
 
 ---------------------------------------
 
+## NOTES AND MUSINGS
+
+- Always doublecheck if SCSS Compiler is on. Would save SO much headache.
+- More SCSS practice to keep from going into too deep into "nesting hell".
+- WP Handbook: lifesaver.
+- underscores: good!
+- learn react: learn gutenburg. 
+- next time, just use the theme hero img instead of using gutenburg feature, bc the content padding will affect hero images made in gutenburg (with current css, at least)
+
+---------------------------------------
+
 ## ASSIGNMENT GENERAL REQUIREMENTS
 
 - The theme should be fully responsive.
